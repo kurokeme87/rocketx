@@ -1,4 +1,4 @@
-import { cookieStorage, createStorage, http } from "@wagmi/core";
+import { cookieStorage, createStorage } from "@wagmi/core";
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
 import { arbitrum, mainnet } from "@reown/appkit/networks";
 
@@ -14,11 +14,11 @@ if (!projectId) {
 }
 
 //Set up the Wagmi Adapter (Config)
-export const wagmiAdapter = new WagmiAdapter({
+export const wagmiAdap = new WagmiAdapter({
   storage,
   networks: [mainnet, arbitrum],
   projectId: projectId,
   ssr: true,
 });
 
-export const config = wagmiAdapter.wagmiConfig;
+export const config = wagmiAdap.wagmiConfig;

@@ -27,7 +27,6 @@ export default function Header() {
           height={140}
         />
       </Link>
-
       {/* Navigation Links */}
       <nav className="hidden lg:block">
         <ul className="flex justify-center space-x-4">
@@ -99,18 +98,19 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-
       {/* Right Side (Desktop) */}
-
+      {/* @ts-ignore */}
       <RocketxConnectButton
         component={
           <div className="flex justify-between items-center whitespace-nowrap py-2 px-4 bg-secondary">
-            <Image
-              src={chainImages[chain?.id]}
-              alt={chain?.name || "provider image"}
-              width={14}
-              height={14}
-            />
+            {chain?.id ? (
+              <Image
+                src={chainImages[chain?.id]}
+                alt={chain?.name || "provider image"}
+                width={14}
+                height={14}
+              />
+            ) : null}
             <div className="text-primary rounded-sm">
               {shortenAddressSmall(address)}
             </div>
@@ -145,9 +145,7 @@ export default function Header() {
         }
         isNavbar={true}
       />
-
       {/* Mobile Menu Button */}
-
       <div className="lg:hidden flex justify-end gap-2">
         <Button className="text-white font-semibold">
           <Image
