@@ -411,3 +411,8 @@ body {
   box-shadow: none;
   border-radius: 10px;
 }
+
+.modal-bg{
+  background: rgb(13,13,28);
+background: linear-gradient(40deg, rgba(13,13,28,1) 35%, rgba(13,13,28,0.8828781512605042) 100%);
+}
