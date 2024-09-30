@@ -65,6 +65,7 @@ const chains = [
 ];
 export const config = defaultWagmiConfig({
   chains,
+  // connectors: ,
   projectId,
   metadata,
   ssr: true,

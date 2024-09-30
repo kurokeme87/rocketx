@@ -2,7 +2,7 @@
 
 import { WagmiProvider } from "wagmi";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
+import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
 import { createWeb3Modal } from "@web3modal/wagmi/react";
 import { config, projectId } from "../../app/web3Config";
 import "@rainbow-me/rainbowkit/styles.css";
@@ -25,7 +25,7 @@ function WagmiRainbowKitProvider({ children }) {
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider
           modalSize="compact"
-          theme={lightTheme({
+          theme={darkTheme({
             accentColor: "rgb(124, 58, 237)",
           })}
           appInfo={{
