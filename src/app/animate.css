@@ -1,0 +1,445 @@
+.dapp-shape-1 {
+    width: 80px;
+    height: 120px;
+    position: absolute;
+    top: 60%;
+    margin-top: -200px;
+    right: 10px;
+    background-image: url(/intro-shape-8.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: floating 5s infinite;
+    z-index: 3;
+}
+
+.dapp-shape-2 {
+    width: 90px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top: -50px;
+    background-image: url(/intro-shape-2.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: floating 3s infinite;
+    z-index: 1;
+}
+
+.dapp-shape-3 {
+    width: 90px;
+    height: 120px;
+    position: absolute;
+    left: 10px;
+    bottom: 35%;
+    margin-bottom: -150px;
+    background-image: url(/intro-shape-4.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: floating 5s infinite;
+    z-index: 3;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.shape-crosschain {
+    width: 150px;
+    height: 170px;
+    background-image: url(/cross-chain-shape.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: levitate 4s infinite ease;
+    margin: auto;
+    z-index: 10;
+    display: block;
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+        filter: hue-rotate(0deg) drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.05));
+    }
+
+    50% {
+        transform: translateY(-20px);
+        filter: hue-rotate(20deg) drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.05));
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: hue-rotate(0deg) drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.05));
+    }
+}
+
+.banner-rewards-1 {
+    width: 340px;
+    height: 162px;
+    position: absolute;
+    right: 250px;
+    top: 50%;
+    margin-top: -400px;
+    background-image: url(/banner-rewards-1.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: levitate 6s infinite ease;
+    z-index: 10;
+    display: none;
+}
+
+.shape-rewards {
+    width: 250px;
+    height: 250px;
+    background-image: url(/intro-shape-5.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -140px;
+    animation: rewardsLevitate 4s infinite ease;
+    z-index: 10;
+    margin-left: -75px;
+}
+
+@media (max-width: 768px) {
+    .shape-rewards {
+        top: 0%;
+        width: 150px;
+        height: 150px;
+        /* margin-left: 0; */
+        left: 0;
+    }
+}
+
+@keyframes rewardsLevitate {
+
+    0% {
+        transform: translateY(0);
+        filter: hue-rotate(0deg) drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.05));
+    }
+
+    50% {
+        transform: translateY(-20px);
+        filter: hue-rotate(-50deg) drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.05));
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: hue-rotate(0deg) drop-shadow(10px 10px 0 rgba(0, 0, 0, 0.05));
+    }
+}
+
+
+.shape-large {
+    width: 1000px;
+    height: 700px;
+    background-image: url(/intro-shape-7.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -600px;
+    top: 10px;
+    animation: flicker 2s infinite linear;
+    transform: rotate(0deg);
+}
+
+@keyframes flicker {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(-50deg);
+    }
+
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+.introduction-blur-contents {
+    width: 1100px;
+    height: 1100px;
+    background-image: url(/blur-contents-4.webp);
+    position: absolute;
+    left: 50%;
+    margin-left: -550px;
+    top: -500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: rotateClockwise 15s infinite linear;
+}
+
+.rewards-blur-contents {
+    width: 1400px;
+    height: 1400px;
+    background-image: url(/blur-contents-8.webp);
+    position: absolute;
+    left: 50%;
+    margin-left: -700px;
+    top: -1200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: rotateClockwise 20s infinite linear;
+}
+
+
+.roadmap-shape-1-inner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    animation: rotateClockwise 2s infinite linear;
+}
+
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.star-3d {
+    width: 85px;
+    height: 85px;
+    background-size: 2550px !important;
+    animation: star .6s steps(31) infinite;
+    background: url(/star.webp) no-repeat 0 bottom;
+    filter: hue-rotate(-50deg);
+    position: absolute;
+    left: -20px;
+    top: 0;
+    margin-top: -27px;
+    transform: scale(.65);
+}
+
+
+@keyframes star {
+    100% {
+        background-position: -2550px bottom;
+    }
+}
+
+
+
+.star-particles {
+    width: 181px;
+    height: 176px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: -10px;
+    background-size: 8145px;
+    background-position: 0 0;
+    animation: chargeStarParticles .7s steps(46) infinite;
+    z-index: 40;
+    background-image: url(/star-particles.png);
+    transform-origin: center bottom;
+    transform: scale(1.5) translateZ(2px);
+    filter: hue-rotate(150deg);
+}
+
+@keyframes chargeStarParticles {
+    100% {
+        background-position: -8145px top;
+    }
+}
+
+
+.laser {
+    width: 163px;
+    height: 528px;
+    position: absolute;
+    left: 50%;
+    margin-left: -82px;
+    top: -151px;
+    background-size: 3586px !important;
+    animation: laser .5s steps(23) infinite;
+    background: url(/laser.png) no-repeat 0 top;
+    z-index: 3;
+}
+
+@keyframes laser {
+    100% {
+        background-position: -3586px top;
+    }
+}
+
+.audit-orb-icon {
+    width: 150px;
+    height: 150px;
+    background-image: url(/intro-shape-2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -72px;
+    margin-top: -65px;
+    animation: rewardsLevitate 4s infinite ease;
+    opacity: 9;
+}
+
+.audit-orb {
+    width: 399px;
+    height: 415px;
+    position: absolute;
+    background-size: 11948px !important;
+    animation: auditOrb .5s steps(30) infinite;
+    background: url(/orb-compressed.png) no-repeat 0 bottom;
+    z-index: 3;
+}
+
+
+@keyframes auditOrb {
+    100% {
+        background-position: -11948px bottom;
+    }
+}
+
+.audit-orb-explode {
+    width: 403px;
+    height: 414px;
+    opacity: 1;
+    position: absolute;
+    left: 10px;
+    background-size: 11687px !important;
+    animation: auditOrbExplode .6s steps(30) infinite;
+    background: url(/orb-explode.png) no-repeat 0 bottom;
+    z-index: 1;
+}
+
+@keyframes auditOrbExplode {
+    100% {
+        background-position: -11678px bottom;
+    }
+}
+
+
+.roadmap-shape-1-inner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    animation: rotateClockwise 2s infinite linear;
+}
+
+.roadmap-shape-1-inner:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.roadmap-shape-2 {
+    width: 40px;
+    height: 40px;
+    border: 1px dashed rgba(255, 255, 255, .15);
+    position: absolute;
+    left: 300px;
+    top: -52px;
+    transform-origin: bottom right;
+    animation: dice 5s infinite ease-in-out;
+}
+
+
+@keyframes dice {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(90deg);
+    }
+
+    60% {
+        transform: rotate(90deg);
+    }
+
+    70% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+.slick-center .testimonial-slide {
+    transform: scale(1.1);
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.testimonial-slide {
+    transition: transform 0.5s ease;
+    transform: scale(0.9);
+}
+
+.loader {
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    right: 5%;
+}
+
+.loader.stop{
+    animation: border 1s linear;
+    border: 2px solid white;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
