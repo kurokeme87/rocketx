@@ -16,7 +16,8 @@ const dm_sans = DM_Sans({
 export const metadata: Metadata = {
   title: "RocketX",
   description:
-    "RocketX offers the best rates on your crypto swaps by comparing prices across top centralized and decentralized exchanges, all in one convenient platform.",
+    "RocketX exchange aggregates both the Centralized and Decentralized Crypto Exchanges and enable users to get the best rates to swap tokens.",
+  keywords: "rocketx exchange, rocketx, Rockets Vault Rockets Exchange",
 };
 
 export default function RootLayout({
