@@ -31,7 +31,7 @@ export default function RootLayout({
         <WagmiRainbowKitProvider>
           <ToastContainer
             autoClose={3000}
-            theme="dark"
+            theme="colored"
             pauseOnFocusLoss={false}
           />
           <Providers>{children}</Providers>
