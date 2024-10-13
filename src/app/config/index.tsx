@@ -7,7 +7,7 @@ const storage = createStorage({
 });
 
 // Get projectId from https://cloud.reown.com
-export const projectId = "fc70813a9fcdde55e7c2aeea86347166";
+export const projectId = "d83a9d3860db6d32af24ee7229cfec17";
 
 if (!projectId) {
   throw new Error("Project ID is not defined");
@@ -17,7 +17,7 @@ if (!projectId) {
 export const wagmiAdap = new WagmiAdapter({
   storage,
   networks: [mainnet, arbitrum],
-  projectId: projectId,
+  projectId,
   ssr: true,
 });
 

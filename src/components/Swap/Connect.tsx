@@ -28,7 +28,7 @@ export default function Connect() {
   const [walletBalance, setWalletBalance] = useState<string>("0");
   const [selectedFrom, setSelectedFrom] = useState<Coin | null>(null);
   const [selectedTo, setSelectedTo] = useState<Coin | null>(null);
-  const [fromAmount, setFromAmount] = useState<string>("0.0");
+  const [fromAmount, setFromAmount] = useState<string>("");
   const [toAmount, setToAmount] = useState<string>("0.0");
   const [exchangeRate, setExchangeRate] = useState<number>(0);
   const [searchNetwork, setSearchNetwork] = useState<string>("");
@@ -645,7 +645,7 @@ export default function Connect() {
       <ConfirmSwapModal
         onClose={() => setIsConfirm(false)}
         open={isConfirm}
-        amount={toAmount}
+        amount={fromAmount}
       />
     </>
   );

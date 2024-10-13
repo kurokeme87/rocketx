@@ -129,7 +129,9 @@ export default function Header() {
                 alt="Wallet"
                 className="h-4"
               />
-              <span>CONNECT WALLET</span>
+              <span>
+                CONNECT <span className="md:block hidden">WALLET</span>
+              </span>
             </div>
             <div className="flex text-white items-center rounded-sm space-x-2 whitespace-nowrap py-2 px-4 bg-secondary">
               <Image
@@ -146,7 +148,7 @@ export default function Header() {
         isNavbar={true}
       />
       {/* Mobile Menu Button */}
-      <div className="lg:hidden flex justify-end gap-2">
+      {/* <div className="lg:hidden flex justify-end gap-2">
         <Button className="text-white font-semibold">
           <Image
             src="/wallet.png"
@@ -160,7 +162,7 @@ export default function Header() {
         <Button className="p-2" onClick={toggleMobileMenu}>
           <AlignJustify />
         </Button>
-      </div>
+      </div> */}
       {/* Mobile Menu */}
       <div
         className={`lg:hidden fixed text-[13px] isolate  top-0 right-0 h-full w-full pt-10 bg-black text-white z-40 transform ${
